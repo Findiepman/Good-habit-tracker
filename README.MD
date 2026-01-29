@@ -43,20 +43,6 @@ This project is **not intended for production or deployment**, but it is fully f
 
 ---
 
-## 📁 Project Structure
-
-```text
-/
-├── index.html
-├── app.js            # App entry point / initialization
-├── state.js          # Global app state
-├── ui.js             # Rendering and DOM manipulation
-├── habits.js         # Habit logic (create, delete, logs)
-├── stats.js          # Statistics calculations
-├── utils.js          # Helper functions (dates, streaks)
-└── styles.css
-```
-
 ## 📊 Data Model (Simplified)
 
 habit = {
@@ -95,4 +81,5 @@ Finished as a practice project.
 
 
 The app is complete for its intended purpose: learning and experimentation.
+
 
