@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics - Habit Tracker</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <h2>Dashboard</h2>
+            <nav>
+                <ul>
+                    <li><button onclick="window.location.href='index.html'" class="sidebar-btn">Home</button></li>
+                    <li><button onclick="window.location.href='dashboard.html'" class="sidebar-btn">Habits</button></li>
+                    <li><button onclick="window.location.href='index.html'" class="sidebar-btn">Settings</button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main id="dashboard">
+            <header class="dashboard-header">
+                <h1>Statistics</h1>
+                <button id="darkmode-toggle" class="darkmode-btn">
+                    <span>🌙</span> Dark Mode
+                </button>
+            </header>
+
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <h3 id="total-habits">0</h3>
+                        <p>Total Habits</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-content">
+                        <h3 id="fortnite">0 / 0</h3>
+                        <p>Completed Today</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-content">
+                        <h3 id="completion-rate">0%</h3>
+                        <p>Completion Rate</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-content">
+                        <h3 id="longest-streak">0</h3>
+                        <p>Longest Streak</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="scripts/darkmode.js"></script>
+    <script type="module" src="scripts/statistics.js"></script>
+</body>
+
+</html>

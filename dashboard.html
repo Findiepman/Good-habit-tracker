@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker Dashboard</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem("theme");
+            if (theme === "dark") {
+                document.documentElement.classList.add("dark-mode");
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+    <div id="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <h2>DashBoard</h2>
+            <nav>
+                <ul>
+                    <li><button onclick="window.location.href='index.html'" class="sidebar-btn">Home</button></li>
+                    <li><button onclick="window.location.href='stats.html'" class="sidebar-btn">Statistics</button></li>
+                    <li><button class="sidebar-btn">Settings</button></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main id="dashboard">
+            <header class="dashboard-header">
+                <h1>Your Habits</h1>
+                <button id="darkmode-toggle" class="darkmode-btn">
+                    <span>🌙</span> Dark Mode
+                </button>
+            </header>
+
+            <div id="habits-grid"></div>
+        </main>
+
+        <!-- Floating Action Button -->
+        <button id="add-habit-btn" class="fab">+</button>
+
+        <!-- Modal (create & detail) -->
+        <div id="habit-modal" class="modal">
+            <div class="modal-content">
+                <h3 id="modal-title">Create Habit</h3>
+                <input id="habit-name" placeholder="Habit name" />
+                <textarea id="habit-desc" placeholder="Description"></textarea>
+                <div class="modal-actions">
+                    <button class="btn" id="close-modal-btn">Cancel</button>
+                    <button class="btn" id="confirm-btn">Create</button>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="habit-detail-modal" class="modal">
+            <div class="modal-content habit-detail">
+                <h3 id="detail-title"></h3>
+                <h3 id="detailStreak"></h3>
+                <p id="detail-desc"></p>
+                <div class="daily-log-section">
+                    <label class="checkbox-row">
+                        <input type="checkbox" id="completed-today" />
+                        <span>Completed today</span>
+                    </label>
+
+                    <textarea id="daily-note" placeholder="Optional note for today..."></textarea>
+                </div>
+                <div class="detail-actions">
+                    <button id="complete-today-btn" class="primary">
+                        Complete for today
+                    </button>
+                    <button id="delete-habit-btn" class="danger">
+                        Delete habit
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="delhabit" class="modal">
+            <div class="modal-content delete-modal">
+                <h3 id="delete-title">Delete habit</h3>
+                <p id="detail-desc">Are you sure you want to delete this habit?</p>
+                <button id="delete-habit-btn1" class="danger">
+                    Delete habit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script type="module" src="scripts/app.js"></script>
+    <script type="module" src="scripts/darkmode.js"></script>
+    <script type="module" src="scripts/statistics.js"></script>
+</body>
+
+</html>
