@@ -56,7 +56,7 @@ This project is **not intended for production or deployment**, but it is fully f
 ├── utils.js          # Helper functions (dates, streaks)
 └── styles.css
 
-📊 Data Model (Simplified)
+## 📊 Data Model (Simplified)
 
 habit = {
   id: Number,
@@ -71,14 +71,14 @@ habit = {
   streak: Number
 }
 
-⚠️ Notes
+## ⚠️ Notes
 This app uses localStorage, so data is stored per browser.
 
 There is no authentication or backend.
 
 The project was intentionally stopped once learning goals were reached.
 
-🚀 Future Ideas (Not Implemented)
+## 🚀 Future Ideas (Not Implemented)
 Backend / database
 
 User accounts
@@ -89,7 +89,8 @@ Export data
 
 Mobile-first redesign
 
-✅ Status
+## ✅ Status
 Finished as a practice project.
+
 
 The app is complete for its intended purpose: learning and experimentation.
