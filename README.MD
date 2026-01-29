@@ -55,6 +55,7 @@ This project is **not intended for production or deployment**, but it is fully f
 ├── stats.js          # Statistics calculations
 ├── utils.js          # Helper functions (dates, streaks)
 └── styles.css
+```
 
 ## 📊 Data Model (Simplified)
 
@@ -94,3 +95,4 @@ Finished as a practice project.
 
 
 The app is complete for its intended purpose: learning and experimentation.
+
