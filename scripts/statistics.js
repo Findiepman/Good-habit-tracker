@@ -70,10 +70,11 @@ export function updateStatsDisplay() {
     console.log("sdafdsf")
 
     document.getElementById("total-habits").textContent = stats.totalHabits;
-    document.getElementById("fortnite").textContent = `${stats.completedToday} / ${stats.totalHabits}`;
+    document.getElementById("completed-total").textContent = `${stats.completedToday} / ${stats.totalHabits}`;
     document.getElementById("completion-rate").textContent = `${stats.completionRate}%`;
     document.getElementById("longest-streak").textContent = stats.longestStreak;
 }
 document.addEventListener('DOMContentLoaded', () => {
     updateStatsDisplay();
+
 });
